@@ -3,29 +3,53 @@
 <head>
     <title>Sweet Shop Management</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #fff8f0;
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to bottom right, #e0f7fa, #fff3f3);
+            min-height: 100vh;
         }
         nav {
-            background-color: #ff9966;
-            padding: 10px;
+            background-color: #7e57c2;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
         nav a {
-            margin: 0 15px;
-            color: white;
-            font-weight: bold;
+            color: #fff;
+            margin: 10px 20px;
             text-decoration: none;
+            font-weight: bold;
+            font-size: 22px;
+            transition: color 0.3s ease, transform 0.3s ease;
+            padding-bottom: 2px;
         }
         nav a:hover {
-            text-decoration: underline;
+            color: #ffd740;
+            transform: scale(1.1);
+            border-bottom: 2px solid #ffd740;
         }
         .container {
-            padding: 30px;
+            padding: 60px 20px;
+            text-align: center;
         }
         h2 {
-            color: #cc6600;
+            color: #6a1b9a;
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+        p {
+            font-size: 18px;
+            color: #424242;
+        }
+        .emoji {
+            font-size: 2.5rem;
         }
     </style>
 </head>
@@ -36,12 +60,12 @@
         <a href="search.jsp">Search Sweets</a>
         <a href="viewSweets">Purchase Sweet</a>
         <a href="viewSweets">Restock Sweet</a>
-         <a href="sortSweets.jsp">sort Sweet</a>
+        <a href="sortSweets.jsp">Sort Sweets</a>
     </nav>
 
     <div class="container">
-        <h2>🍬 Welcome to Sweet Shop Management System</h2>
-        <p>Use the navigation above to manage sweets in your shop.</p>
+        <h2 class="emoji">Welcome to Sweet Shop Management System</h2>
+        <p>Use the navigation above to manage your sweets with a delightful experience!</p>
     </div>
 </body>
 </html>
