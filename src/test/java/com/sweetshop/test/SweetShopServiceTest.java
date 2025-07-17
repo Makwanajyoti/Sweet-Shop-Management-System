@@ -15,6 +15,16 @@ public class SweetShopServiceTest {
         assertTrue(service.addSweet(sweet));
     }
 
+    @Test
+    public void testPurchaseSweet() {
+     SweetService service = SweetService.getInstance();
+
+        Sweet sweet = new Sweet(2, "Gulab Jamun", "Milk-Based", 20, 10);
+        service.addSweet(sweet);
+
+        assertTrue(service.purchaseSweet(2, 5));
+        assertEquals(5, service.getSweetById(2).getQuantity());
+    }
 
     @Test
     public void testDeleteSweet() {
