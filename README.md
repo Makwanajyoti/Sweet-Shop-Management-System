@@ -1,23 +1,23 @@
-# 🍬 Sweet Shop Management System
+#  Sweet Shop Management System
 
 A simple web-based application to manage a sweet shop's inventory using **JSP**, **Servlets**, **Jakarta EE**, following **Test-Driven Development (TDD)** with **JUnit**.
 
 ---
 
-## 🚀 Features
+##  Features
 
-- ✅ Add New Sweets
-- 📋 View All Available Sweets
-- 🔍 Search Sweets (by name, category, price range)
-- ❌ Delete Sweets
-- 🛒 Purchase Sweets (reduce stock)
-- 🔁 Restock Sweets
-- 📊 Sort Sweets (by price, quantity)
-- 🧪 JUnit Test Coverage for Service and DAO layers
+- Add New Sweets
+- View All Available Sweets
+- Search Sweets (by name, category, price range)
+- Delete Sweets
+- Purchase Sweets (reduce stock)
+- Restock Sweets
+- Sort Sweets (by price, quantity)
+- JUnit Test Coverage for Service and DAO layers
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Layer         | Technology                          |
 |---------------|--------------------------------------|
@@ -30,7 +30,7 @@ A simple web-based application to manage a sweet shop's inventory using **JSP**,
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 SweetShopManagement/ <br>
 ├── src/<br>
@@ -51,7 +51,7 @@ SweetShopManagement/ <br>
 
 ---
 
-## 🧪 Test-Driven Development (TDD)
+##  Test-Driven Development (TDD)
 
 This project follows a TDD approach:
 - All core business logic (add, delete, restock, purchase, etc.) is tested using **JUnit 5**.
