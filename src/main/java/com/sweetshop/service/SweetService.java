@@ -84,11 +84,26 @@ public List<Sweet> searchByPriceRange(int minPrice, int maxPrice) {
         .filter(s -> s.getPrice() >= minPrice && s.getPrice() <= maxPrice)
         .collect(Collectors.toList());
 }
+public List<Sweet> sortSweetsBy(String sortBy) {
+    List<Sweet> allSweets = getAllSweets();
 
-//    public Sweet getSweetById(int id) {
-//        for (Sweet s : sweets) {
-//            if (s.getId() == id) return s;
-//        }
-//        return null;
-//    }
+    switch (sortBy) {
+        case "name":
+            allSweets.sort((s1, s2) -> s1.getName().compareToIgnoreCase(s2.getName()));
+            break;
+        case "price":
+            allSweets.sort(Comparator.comparingDouble(Sweet::getPrice));
+            break;
+        case "quantity":
+            allSweets.sort(Comparator.comparingInt(Sweet::getQuantity));
+            break;
+        case "id":
+        default:
+            allSweets.sort(Comparator.comparingInt(Sweet::getId));
+            break;
+    }
+
+    return allSweets;
+}
+
 }

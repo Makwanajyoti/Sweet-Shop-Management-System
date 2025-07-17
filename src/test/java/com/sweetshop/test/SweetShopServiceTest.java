@@ -106,5 +106,39 @@ public void testSearchByRange() {
     List<Sweet> results = service.searchByPriceRange(20, 40);
     assertTrue(results.stream().allMatch(s -> s.getPrice() >= 20 && s.getPrice() <= 40));
 }
+ @Test
+    public void testSortByName() {
+         SweetService service = SweetService.getInstance();
+        List<Sweet> sorted = service.sortSweetsBy("name");
+        for (int i = 1; i < sorted.size(); i++) {
+            assertTrue(sorted.get(i - 1).getName().compareTo(sorted.get(i).getName()) <= 0);
+        }
+    }
 
+    @Test
+    public void testSortByPrice() {
+         SweetService service = SweetService.getInstance();
+        List<Sweet> sorted = service.sortSweetsBy("price");
+        for (int i = 1; i < sorted.size(); i++) {
+            assertTrue(sorted.get(i - 1).getPrice() <= sorted.get(i).getPrice());
+        }
+    }
+
+    @Test
+    public void testSortByQuantity() {
+         SweetService service = SweetService.getInstance();
+        List<Sweet> sorted = service.sortSweetsBy("quantity");
+        for (int i = 1; i < sorted.size(); i++) {
+            assertTrue(sorted.get(i - 1).getQuantity() <= sorted.get(i).getQuantity());
+        }
+    }
+
+    @Test
+    public void testSortById() {
+         SweetService service = SweetService.getInstance();
+        List<Sweet> sorted = service.sortSweetsBy("id");
+        for (int i = 1; i < sorted.size(); i++) {
+            assertTrue(sorted.get(i - 1).getId() <= sorted.get(i).getId());
+        }
+    }
 }

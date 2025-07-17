@@ -21,6 +21,15 @@
     <servlet-name>SearchSweetServlet</servlet-name>
     <url-pattern>/searchSweet</url-pattern>
 </servlet-mapping>
+<servlet>
+    <servlet-name>SortSweetServlet</servlet-name>
+    <servlet-class>com.sweetshop.controller.SortSweetServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>SortSweetServlet</servlet-name>
+    <url-pattern>/sortSweet</url-pattern>
+</servlet-mapping>
 
     <session-config>
         <session-timeout>
