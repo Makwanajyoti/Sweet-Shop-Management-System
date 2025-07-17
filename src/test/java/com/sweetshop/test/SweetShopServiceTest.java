@@ -2,6 +2,7 @@ package com.sweetshop.test;
 
 import com.sweetshop.model.Sweet;
 import com.sweetshop.service.SweetService;
+import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -84,4 +85,26 @@ public class SweetShopServiceTest {
         boolean result = service.restockSweet(101, -5);
         assertFalse(result);
     }
+    @Test
+public void testSearchByName() {
+    SweetService service = SweetService.getInstance();
+    service.addSweet(new Sweet(200, "Barfi", "Milk", 30, 50));
+    List<Sweet> results = service.searchByName("Barfi");
+    assertFalse(results.isEmpty());
+}
+
+@Test
+public void testSearchByCategory() {
+    SweetService service = SweetService.getInstance();
+    List<Sweet> results = service.searchByCategory("Milk");
+    assertTrue(results.stream().allMatch(s -> s.getCategory().equalsIgnoreCase("Milk")));
+}
+
+@Test
+public void testSearchByRange() {
+    SweetService service = SweetService.getInstance();
+    List<Sweet> results = service.searchByPriceRange(20, 40);
+    assertTrue(results.stream().allMatch(s -> s.getPrice() >= 20 && s.getPrice() <= 40));
+}
+
 }

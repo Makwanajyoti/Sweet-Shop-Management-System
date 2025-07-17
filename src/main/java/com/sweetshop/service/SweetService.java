@@ -2,6 +2,7 @@ package com.sweetshop.service;
 
 import com.sweetshop.model.Sweet;
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class SweetService {
     private static SweetService instance;
@@ -66,6 +67,23 @@ public boolean restockSweet(int id, int quantity) {
         sweets.sort(Comparator.comparingInt(Sweet::getQuantity));
         return new ArrayList<>(sweets);
     }
+public List<Sweet> searchByName(String name) {
+    return sweets.stream()
+        .filter(s -> s.getName().equalsIgnoreCase(name))
+        .collect(Collectors.toList());
+}
+
+public List<Sweet> searchByCategory(String category) {
+    return sweets.stream()
+        .filter(s -> s.getCategory().equalsIgnoreCase(category))
+        .collect(Collectors.toList());
+}
+
+public List<Sweet> searchByPriceRange(int minPrice, int maxPrice) {
+    return sweets.stream()
+        .filter(s -> s.getPrice() >= minPrice && s.getPrice() <= maxPrice)
+        .collect(Collectors.toList());
+}
 
 //    public Sweet getSweetById(int id) {
 //        for (Sweet s : sweets) {
