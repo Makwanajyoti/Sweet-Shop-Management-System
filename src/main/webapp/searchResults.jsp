@@ -62,9 +62,24 @@
             font-size: 18px;
             color: #7e57c2;
         }
+         a button{
+            font-size: 20px;
+        }
+           .btn {
+            display: inline-block;
+            margin: 10px 5px;
+            padding: 10px 18px;
+            background-color: #7e57c2;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+            font-weight: 600;
+        }
     </style>
 </head>
 <body>
+    <a href="index.jsp" ><button class="btn">back</button></a>
 <div class="container">
     <h2>Search Results</h2>
 

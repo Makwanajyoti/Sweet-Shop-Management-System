@@ -79,9 +79,13 @@
             font-size: 17px;
             margin: 2px;
         }
+        a button{
+            font-size: 20px;
+        }
     </style>
 </head>
 <body>
+    <a href="index.jsp" ><button class="btn">back</button></a>
     <div class="container">
         <h2>Sweet Inventory</h2>
 

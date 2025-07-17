@@ -75,9 +75,24 @@
             color: red;
             font-weight: bold;
         }
+           a button{
+            font-size: 20px;
+        }
+           .btn {
+            display: inline-block;
+            margin: 10px 5px;
+            padding: 10px 18px;
+            background-color: #7e57c2;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+            font-weight: 600;
+        }
     </style>
 </head>
 <body>
+    <a href="index.jsp" ><button class="btn">back</button></a>
     <h2>Sort Sweets</h2>
     <form action="sortSweet" method="get">
         <label>Sort By:</label>
