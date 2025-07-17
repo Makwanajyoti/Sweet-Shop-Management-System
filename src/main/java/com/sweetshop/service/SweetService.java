@@ -45,12 +45,17 @@ public class SweetService {
         return false;
     }
 
-    public void restockSweet(int id, int quantity) {
-        Sweet sweet = getSweetById(id);
-        if (sweet != null) {
-            sweet.setQuantity(sweet.getQuantity() + quantity);
-        }
+// Inside SweetService.java
+
+public boolean restockSweet(int id, int quantity) {
+    Sweet sweet = getSweetById(id);
+    if (sweet != null && quantity > 0) {
+        sweet.setQuantity(sweet.getQuantity() + quantity);
+        return true;
     }
+    return false;
+}
+
     
     public List<Sweet> sortByPrice() {
         sweets.sort(Comparator.comparingDouble(Sweet::getPrice));

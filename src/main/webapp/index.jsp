@@ -35,7 +35,7 @@
         <a href="viewSweets">View Sweets</a>
         <a href="searchSweet.jsp">Search Sweets</a>
         <a href="viewSweets">Purchase Sweet</a>
-        <a href="restockSweet.jsp">Restock Sweet</a>
+        <a href="viewSweets">Restock Sweet</a>
     </nav>
 
     <div class="container">

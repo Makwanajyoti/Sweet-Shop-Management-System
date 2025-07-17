@@ -19,7 +19,7 @@
             %>
              <td> <a href="deleteSweet?id=<%=s.getId()%>">Delete</a> |
         <a href="purchasesweet.jsp?id=<%=s.getId()%>&quantity=<%=s.getQuantity()%>">Purchase</a> |
-        <a href="restockSweet.jsp?id=<%=s.getId()%>">Restock</a> </td>
+        <a href="restocksweet.jsp?id=<%=s.getId()%>">Restock</a> </td>
         </tr>
        
     <%
