@@ -51,4 +51,21 @@ public class SweetService {
             sweet.setQuantity(sweet.getQuantity() + quantity);
         }
     }
+    
+    public List<Sweet> sortByPrice() {
+        sweets.sort(Comparator.comparingDouble(Sweet::getPrice));
+        return new ArrayList<>(sweets);
+    }
+
+    public List<Sweet> sortByQuantity() {
+        sweets.sort(Comparator.comparingInt(Sweet::getQuantity));
+        return new ArrayList<>(sweets);
+    }
+
+//    public Sweet getSweetById(int id) {
+//        for (Sweet s : sweets) {
+//            if (s.getId() == id) return s;
+//        }
+//        return null;
+//    }
 }

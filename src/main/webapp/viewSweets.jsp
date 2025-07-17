@@ -14,9 +14,14 @@
             <td><%= s.getCategory() %></td>
             <td><%= s.getPrice() %></td>
             <td><%= s.getQuantity() %></td>
+             <td> <a href="deleteSweet?id=<%=s.getId()%>">Delete</a> |
+        <a href="purchaseSweet.jsp?id=<%=s.getId()%>">Buy</a> |
+        <a href="restockSweet.jsp?id=<%=s.getId()%>">Restock</a> </td>
         </tr>
+       
     <%
             }
         }
     %>
 </table>
+

@@ -15,4 +15,15 @@ public class SweetShopServiceTest {
         assertTrue(service.addSweet(sweet));
     }
 
+
+    @Test
+    public void testDeleteSweet() {
+        SweetService service = SweetService.getInstance();
+
+        Sweet sweet = new Sweet(3, "Candy", "Sugar-Based", 5, 100);
+        service.addSweet(sweet);
+
+        assertTrue(service.deleteSweet(3));
+        assertNull(service.getSweetById(3));
+    }
 }
